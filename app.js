@@ -8,9 +8,15 @@ If they're equal, return either one.
 Exercise 1 has been completed for you:
 */
 
-console.log("");
-console.log("============ 1 =============");
-console.log("");
+
+const banner = (exerciseNumber) => {
+    console.log("================================================");
+    console.log("============== " +  "Exercise number" + exerciseNumber + " ================");
+    console.log("================================================");
+}
+
+banner(1);
+
 
 
 const maxOfTwoNumbers = (x, y) => {
@@ -19,15 +25,21 @@ const maxOfTwoNumbers = (x, y) => {
     } else {
       return y;
     }
-  }
+}
   
   console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
+
+
+const maxOfNumbers = function(num1, num2){
+    const max = num1 > num2 ? num1 : num2;
+    return max;
+  }
+  
+console.log('Exercise 1b Result:', maxOfNumbers(3, 9));
   
   
   
-console.log("");
-console.log("============ 2 =============");
-console.log("");
+banner(2);
 
 
 /*
@@ -53,9 +65,24 @@ const isAdult = (age) => {
 console.log('Exercise 2 Result:', isAdult(21));
 
 
+
+
+const isAdult2 = function(age) {
+    const result = age >= 18 ? 'Adult' : 'Minor';
+    return result;
+  }
+  
+  console.log('Exercise 2b Result:', isAdult(11));
+  
+
+
+
+
+
 console.log("");
-console.log("============ 3 =============");
-console.log("");
+
+
+banner(3);
 
 /*
 Exercise 3: isCharAVowel()
@@ -70,6 +97,9 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 const isCharAVowel = (char) => {
+//added this in case user inputs "A" or "E" or "I" or "O" or "U"
+    char = char.toLowerCase();
+    
     if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
         return true;
     } else {
@@ -80,9 +110,7 @@ const isCharAVowel = (char) => {
 
 console.log('Exercise 3 Result:', isCharAVowel("a"));
 
-console.log("");
-console.log("============ 4 =============");    
-console.log("");
+banner(4);
 /*
 Exercise 4: generateEmail()
 
@@ -101,9 +129,7 @@ const generateEmail = (name, domain) => {
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
 
-console.log("");
-console.log("============ 5 =============");
-console.log("");
+banner(5);
 
 /*
 Exercise 5: greetUser()
@@ -123,9 +149,7 @@ const greetUser = (name, timeOfDay) => {
 
 console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
 
-console.log("");
-console.log("============ 6 =============");
-console.log("");
+banner(6);
 /*
 Exercise 6: maxOfThree()
 
@@ -149,9 +173,7 @@ const maxOfThree = (num1, num2, num3) => {
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
 
-console.log("");
-console.log("============ 7 =============");
-console.log("");
+banner(7);
 /*
 Exercise 7: calculateTip()
 
@@ -170,9 +192,7 @@ const calculateTip = (billAmount, tipPercentage) => {
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
 
-console.log("");
-console.log("============ 8 =============");
-console.log("");
+banner(8);
 /*
 Exercise 8: convertTemperature()
 
@@ -198,8 +218,7 @@ const convertTemperature = (temperature, scale) => {
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
 
 console.log("");
-console.log("============ 9 =============");
-console.log("");
+banner(9);
 /*
 Exercise 9: basicCalculator()
 
@@ -234,11 +253,26 @@ const basicCalculator = (num1, num2, operation) => {
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 
 
-console.log("");
-console.log("============ 10 =============");
-console.log("");
 
-/*
+const basicCalculator2 = function(num1, num2, op) {
+    if (op.toLowerCase() === 'add') {
+      return num1 + num2;
+    } else if (op.toLowerCase() === 'subtract') {
+      return num1 - num2;
+    } else if (op.toLowerCase() === 'divide') {
+      return num1 / num2;
+    } else if (op.toLowerCase() === 'multiply') {
+      return num1 * num2;
+    }
+  }
+  
+  console.log('Exercise 9b Result:', basicCalculator(10, 5, "subtract"));
+  
+
+
+  banner(10);
+
+
 /*
 Exercise 10: calculateGrade()
 
@@ -273,9 +307,7 @@ const calculateGrade = (score) => {
 console.log('Exercise 10 Result:', calculateGrade(85));
 
 
-console.log("");
-console.log("============ 11 =============");
-console.log("");
+banner(11);
 
 
 /*
@@ -301,9 +333,7 @@ const createUsername = (firstName, lastName) => {
 console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
 
 
-console.log("");
-console.log("============ 12 =============");
-console.log("");
+banner(12);
 
 
 
